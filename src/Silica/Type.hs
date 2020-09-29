@@ -972,15 +972,15 @@ instance Semigroup  r => A_Fold1      <: A_Getting r where implies _ r = r
 instance Monoid     r => A_Traversal  <: A_Getting r where implies _ r = r
 instance Semigroup  r => A_Traversal1 <: A_Getting r where implies _ r = r
 
-instance NotSubtypeError A_Setter A_Getter => A_Setter                       <: A_Getting r where implies _ = error "subtype"
+-- instance NotSubtypeError A_Setter A_Getter => A_Setter                       <: A_Getting r where implies _ = error "subtype"
 
-instance NotSubtypeError A_Getter A_Setter => A_Getter <: A_Setter where implies _ = error "subtype"
+-- instance NotSubtypeError A_Getter A_Setter => A_Getter <: A_Setter where implies _ = error "subtype"
 
-instance NotSubtypeError A_Traversal A_Getter => A_Traversal <: A_Getter where implies _ = error "subtype"
+-- instance NotSubtypeError A_Traversal A_Getter => A_Traversal <: A_Getter where implies _ = error "subtype"
 
-instance NotSubtypeError (A_Getting r) A_Setter => (A_Getting r) <: A_Setter where implies _ = error "subtype"
+-- instance NotSubtypeError (A_Getting r) A_Setter => (A_Getting r) <: A_Setter where implies _ = error "subtype"
 
-instance NotSubtypeError (A_Getting r) A_Getter => (A_Getting r) <: A_Getter where implies _ = error "subtype"
+-- instance NotSubtypeError (A_Getting r) A_Getter => (A_Getting r) <: A_Getter where implies _ = error "subtype"
 
 instance A_Indexed i A_Lens <: A_Lens where implies _ r = r
 instance A_Indexed i A_Fold <: A_Fold where implies _ r = r
